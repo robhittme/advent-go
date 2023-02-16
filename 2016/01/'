@@ -1,0 +1,57 @@
+const assert = require('assert');
+const fs = require('fs');
+
+const final = [];
+
+  fs.readFile('formatted.txt', 'utf8', function(err, data) {
+    const split = data.split('\n')
+    let counter = 0;
+    split.forEach((s) => {
+      if(s === '') {
+        counter++;
+      } else {
+        final.push([])
+        final[counter].push(s);
+      }
+    })
+    console.log({final})
+  })
+
+const example = [
+  [
+    1000,
+    2000,
+    3000,
+  ],
+  [
+    4000,
+
+  ],
+  [
+    5000,
+    6000,
+
+  ],
+  [
+    7000,
+    8000,
+    9000,
+  ],
+  [
+    10000
+  ]]
+
+const part1 = (calories) => {
+  return most;
+}
+
+const part2 = (calories) => {
+  return topThree.reduce((acc, val) => {
+    return val + acc;
+  }, 0)
+}
+
+
+part1()
+part2(example)
+
